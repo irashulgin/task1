@@ -1,0 +1,16 @@
+<div class="card">
+	<div class="content">
+	 	<div class="header"> Task id: {{$ctrl.item.id}} </div>
+    	<div class="meta">
+    	<span>Order :  {{$ctrl.item.order}}</span>
+    	</div>
+      	<div class="description">
+      		<editable-field field-value="$ctrl.item.task" field-type="text" on-update="$ctrl.update('task', value)"></editable-field><br>
+      	</div>
+    </div>
+    <div class="extra content">
+      	<div class="ui two buttons task-delete-btn">
+	        <div ng-click="$ctrl.delete()" class="ui basic red button">Delete</div>
+	    </div>
+	</div>
+</div>

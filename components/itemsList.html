@@ -1,0 +1,12 @@
+<div class="main">
+	<task-input type="new" on-click="$ctrl.addTask(text)"></task-input>
+	<task-input type="search" on-click="$ctrl.searchTask(query)"></task-input>
+	<div class="ui action  reload-task">
+		<button class="ui large teal button btn btn-primary" ng-click="$ctrl.getTasks()">Reload list</button>
+	</div>
+	<ul class="ui cards tasks" ui-sortable="sortableOptions" ng-model="$ctrl.list">
+	  <li ng-repeat="item in $ctrl.list "><item-detail class="ui card task-content"  item="item" on-delete="$ctrl.deleteItem(item)" on-update="$ctrl.updateItem(item, prop, value)">
+	  </item-detail>
+	  </li>
+	</ul>
+</div>

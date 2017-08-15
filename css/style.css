@@ -1,0 +1,36 @@
+.column {
+    max-width: 450px;
+}
+.new-task-text {
+	min-width: 300px;
+}
+.task-edit-btn {
+	margin-left: 20px !important;
+}
+.task-content {
+	padding: 20px !important;
+}
+.new-task, .search-task {
+	 margin: 2em 2em 2em  0;
+}
+.task-delete-btn {
+	margin-top: 20px !important;
+}
+ul.tasks {
+  	list-style: none;
+  	padding: 0;
+	margin: 0 !important;
+}
+ul.tasks li {
+    margin-right: 1em;
+}
+.reload-task {
+	margin-bottom: 2em;
+}
+.main {
+	padding: 2em;
+}
+.main-list {
+	display:flex;
+	align-items:stretch;
+}

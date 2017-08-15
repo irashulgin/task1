@@ -1,0 +1,4 @@
+<input  type="email" ng-minlength=3 placeholder="email" ng-pattern="$ctrl.emailpattern" name="email" ng-model="$ctrl.myInputModel" ng-change="$ctrl.update($ctrl.myInputModel)" required />
+<div class="ui red message" ng-show="$ctrl.formReference.email.$error.pattern">
+	Please enter a valid email.
+</div>

@@ -1,0 +1,10 @@
+<div ng-if="$ctrl.type == 'new'" class="ui action input new-task">
+	<textarea class="new-task-text" placeholder="enter task" ng-model="$ctrl.taskText"></textarea>
+	<button class="ui large teal button btn btn-primary" ng-click="$ctrl.addTask($ctrl.taskText)"> Add task
+	</button>
+</div>
+<div ng-if="$ctrl.type == 'search'" class="ui action input search-task">
+	<textarea class="new-task-text" placeholder="enter query" ng-model="$ctrl.taskSearch"></textarea>
+	<button class="ui large teal button btn btn-primary" ng-click="$ctrl.searchTask($ctrl.taskSearch)"> Search task
+	</button>
+</div>

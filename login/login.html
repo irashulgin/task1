@@ -1,0 +1,26 @@
+<div class="ui middle aligned center aligned grid">
+	<div class="column"> 
+	    <h2>Login</h2>
+	    <form name="form" class="ui large form" ng-submit="loginCtrl.login()" role="form">
+			<div class="ui stacked segment">
+				<div class="field">
+					Email:
+					<my-input-email  form-reference="form" my-input-model="loginCtrl.email" on-update="loginCtrl.updateMyEmail(value)"></my-input-email>
+				</div>
+				<div class="field">
+					Password:
+					<my-input-password form-reference="form" my-input-model="loginCtrl.password" on-update="loginCtrl.updateMyPassword(value)" type="password"></my-input-password>
+				</div> 
+		        <div>
+		            <button type="submit"  class="ui fluid large teal submit button btn btn-primary" ng-disabled="form.$invalid || loginCtrl.dataLoading">Login</button> 
+		            <div ng-if="loginCtrl.dataLoading" class="ui active dimmer">
+					    <div class="ui text loader">Loading</div>
+					</div>
+		        </div>
+				<div class="ui negative  message" ng-if="loginCtrl.error.length > 0">
+				{{loginCtrl.error}}</div>
+			</div>
+			<div class="ui message"><a href="#!/register" class="btn btn-link">Register</a></div>
+	    </form>
+	</div>
+</div>
